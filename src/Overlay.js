@@ -1,6 +1,7 @@
 import { Logo } from '@pmndrs/branding'
 import { motion, AnimatePresence } from 'framer-motion'
 import { AiFillCamera, AiOutlineArrowLeft, AiOutlineHighlight, AiOutlineShopping } from 'react-icons/ai'
+import { IoShirt } from 'react-icons/io5'
 import { useSnapshot } from 'valtio'
 import { state } from './store'
 
@@ -15,7 +16,7 @@ export function Overlay() {
   return (
     <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}>
       <motion.header initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} transition={transition}>
-        <Logo width="40" height="40" />
+        <IoShirt size="3em" />
         <motion.div animate={{ x: snap.intro ? 0 : 100, opacity: snap.intro ? 1 : 0 }} transition={transition}>
           <AiOutlineShopping size="3em" />
         </motion.div>
